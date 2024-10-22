@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d7d11fa096.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="navbar__container">
+    <a href="/" id="navbar__logo"><i class="fa-solid fa-gamepad" style="color: #110c5a;"></i>  TRGames Store</a>
+    <div class="search-bar">
+        <input type="text" placeholder ="Search for games, platforms..." id="search-input">
+        <img src="images/search.png" width="40" height="40" class="searchIcon">
+    </div>
+
+    <div class="navbar__toggle" id="mobile-menu">
+       <span class="bar"></span> 
+       <span class="bar"></span> 
+       <span class="bar"></span> 
+       <span class="bar"></span> 
+    </div> 
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/" class="navbar__links"> Home </a>
+        </li>
+        <li class="navbar__item">
+            <a href="Games.html" class="navbar__links"> Games </a>
+        </li>
+        <li class="navbar__item dropdown">
+            <a href="#" class="navbar__links dropdown-toggle">Platforms</a>
+            <ul class="dropdown-menu">
+                <li><a href="#">PlayStation</a></li>
+                <li><a href="#">Xbox</a></li>
+                <li><a href="#">Nintendo Switch</a></li>
+                <li><a href="#">PC</a></li>
+            </ul>
+        </li>
+        <li class="navbar__item">
+            <a href="/" class="navbar__links"> Contact Us </a>
+        </li>
+        <li class="navbar__item">
+            <a href="support.html" class="navbar__links"> Customer Support </a>
+        </li>
+            <!-- Cart Button Icon -->
+            <li class="navbar__item">
+                <a href="cart.html" class="navbar__links cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span> <!-- Dynamic count -->
+                </a>
+            </li>
+        <li class="navbar__btn">
+            <a href="signup.html" class="button"> Sign Up </a>
+        </li>
+    </ul>   
+    </div>
+</nav>
+
+<!-- Category Filter Buttons -->
+<div class="category">
+<section class="category-buttons">
+    <button class="category-btn" onclick="filterGames('all')">All</button>
+    <button class="category-btn" onclick="filterGames('adventure')">Adventure</button>
+    <button class="category-btn" onclick="filterGames('action')">Action</button>
+    <button class="category-btn" onclick="filterGames('sports')">Sports</button>
+    <button class="category-btn" onclick="filterGames('shooter')">Shooter</button>
+</section>
+<!-- Products Details -->
+<section class="games-section">
+    <div class="game-card" data-category="adventure">
+        <img src="images/tsush.jpg" width="200" height="170">
+        <h3 class = "game-title">Ghost of Tsushima</h3>
+        <p class="game-price">$70.00</p>
+        <p class="game-description">Embark on an epic journey as the last samurai, Jin Sakai, in a visually stunning open-world adventure.</p>
+        <button class="add-to-cart" onclick="addToCart('Ghost of Tsushima', 70.00)">Add to Cart</button>
+    </div>
+    <div class="game-card" data-category="action">
+        <img src="images/tr.jpg"  width="200" height="170">
+        <h3 class = "game-title">God of War</h3>
+        <p class="game-price">$30.99</p>
+        <p class="game-description">Experience brutal combat and a gripping story of fatherhood and vengeance.</p>
+        <button class="add-to-cart" onclick="addToCart('God of War', 30.99)">Add to Cart</button>
+    </div>
+
+    <div class="game-card" data-category="sports">
+        <img src="images/uy.jpg"  width="200" height="170">
+        <h3 class = "game-title">EA FC 25</h3>
+        <p class="game-price">$100.00</p>
+        <p class="game-description">Experience the thrill of the pitch with EA FC 25 - where every match is more dynamic, authentic, and immersive than ever before.</p>
+        <button class="add-to-cart" onclick="addToCart('EA FC 25', 100.00)">Add to Cart</button>
+    </div>
+
+    <div class="game-card" data-category="shooter">
+        <img src="images/ops.png"  width="200" height="170">
+        <h3 class = "game-title">Call of Duty Black Ops 6</h3>
+        <p class="game-price">$90.99</p>
+        <p class="game-description">Step into the shadows of global conflict in Black Ops 6, where high-stakes covert operations and futuristic warfare collide.</p>
+        <button class="add-to-cart" onclick="addToCart('Call of Duty Black Ops 6', 90.99)">Add to Cart</button>
+    </div>
+    <div class="game-card" data-category="action">
+        <img src="images/dead.jpg"  width="200" height="170">
+        <h3 class = "game-title">Read Dead Redemption 2</h3>
+        <p class="game-price">$80.00</p>
+        <p class="game-description">Explore the wilderness, engage in shootouts, and experience the downfall of the outlaw lifestyle in this masterful blend of action.</p>
+        <button class="add-to-cart" onclick="addToCart('Read Dead Redemption 2', 80.00)">Add to Cart</button>
+    </div>
+    <div class="game-card" data-category="sports">
+        <img src="images/mlb.png"  width="200" height="170">
+        <h3 class = "game-title">MLB The Show 24</h3>
+        <p class="game-price">$35.99</p>
+        <p class="game-description">Step up to the plate in MLB The Show 24, the ultimate baseball simulation game.</p>
+        <button class="add-to-cart" onclick="addToCart('MLB The Show 24', 35.99)">Add to Cart</button>
+    </div>
+    <div class="game-card" data-category="adventure">
+        <img src="images/wukong.png"  width="200" height="170">
+        <h3 class = "game-title">Black Myth Wukong</h3>
+        <p class="game-price">$102.99</p>
+        <p class="game-description">Follow the story of the legendary Monkey King, Sun Wukong, as he embarks on an epic journey filled with fantastical creatures, fierce battles and mystical landscapes.</p>
+        <button class="add-to-cart" onclick="addToCart('Black Myth Wukong', 102.99)">Add to Cart</button>
+    </div>
+    <div class="game-card" data-category="shooter">
+        <img src="images/ghost.png"  width="200" height="170">
+        <h3 class = "game-title">Ghost Recon Wildlands</h3>
+        <p class="game-price">$25.99</p>
+        <p class="game-description">Dismantle the powerful Santa Blanca drug cartel that has taken control of the country.</p>
+        <button class="add-to-cart" onclick="addToCart('Ghost Recon Wildlands', 25.99)">Add to Cart</button>
+    </div>
+    <div class="game-card" data-category="adventure">
+        <img src="images/StarW.png"  width="200" height="170">
+        <h3 class = "game-title">Star Wars Outlaws</h3>
+        <p class="game-price">$70.99</p>
+        <p class="game-description">Participate in high-stakes encounters with both the Empire and criminal syndicates.</p>
+        <button class="add-to-cart" onclick="addToCart('Star Wars Outlaws', 70.99)">Add to Cart</button>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<section>
+    <footer>
+        <div class="footer-container">
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:innocentmundanga28@gmail.com">innocentmundanga28@gmail.com</a></p>
+                <p>Phone: 0789886120</p>
+            </div>
+    
+            <!-- Social Media -->
+            <div class="social-media">
+                <h1>Connect With Us</h1>
+                <br>
+                <a href="https://www.facebook.com"> <i class="fa-brands fa-facebook fa-2xl" style="color: #12346e;"></i></a>
+                <a href="https://www.instagram.com"> <i class="fa-brands fa-square-instagram fa-2xl" style="color: #103575;"></i></a>
+                <a href="https://www.twitter.com"> <i class="fa-brands fa-x-twitter fa-2xl" style="color: #102a56;"></i></a>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube fa-2xl" style="color: #0a2c66;"></i> </a>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <h1>Payment Methods</h1>
+                <img src="images/vs.png" alt="Visa">
+                <img src="images/mms.jpg" alt="MasterCard">
+                <img src="images/ppl.png" alt="PayPal">
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2024 TRGameStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>

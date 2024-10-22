@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRGames Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d7d11fa096.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar__container">
+        <a href="/" id="navbar__logo"><i class="fa-solid fa-gamepad" style="color: #110c5a;"></i>  TRGames Store</a>
+        <div class="search-bar">
+            <input type="text" placeholder ="Search for games, platforms..." id="search-input">
+            <img src="images/search.png" width="40" height="40" class="searchIcon">
+        </div>
+
+        <div class="navbar__toggle" id="mobile-menu">
+           <span class="bar"></span> 
+           <span class="bar"></span> 
+           <span class="bar"></span> 
+           <span class="bar"></span> 
+        </div> 
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="/" class="navbar__links"> Home </a>
+            </li>
+            <li class="navbar__item">
+                <a href="games.html" class="navbar__links"> Games </a>
+            </li>
+            <li class="navbar__item dropdown">
+                <a href="#" class="navbar__links dropdown-toggle">Platforms</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">PlayStation</a></li>
+                    <li><a href="#">Xbox</a></li>
+                    <li><a href="#">Nintendo Switch</a></li>
+                    <li><a href="#">PC</a></li>
+                </ul>
+            </li>
+            <li class="navbar__item">
+                <a href="/" class="navbar__links"> Contact Us </a>
+            </li>
+            <li class="navbar__item">
+                <a href="support.html" class="navbar__links"> Customer Support </a>
+            </li>
+                <li class="navbar__item">
+                    <a href="cart.html" class="navbar__links cart-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">0</span> <!-- Dynamic count -->
+                    </a>
+                </li>
+            <li class="navbar__btn">
+                <a href="signup.html" class="button"> Sign Up </a>
+            </li>
+        </ul>   
+        </div>
+    </nav>
+<script src="script.js"></script>
+<script src="cart.js"></script>
+
+<div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Your Ultimate Online Gaming Store</h1>
+            <p>Discover the latest releases, bestsellers, and exclusive deals. Explore our massive collection of games now!</p>
+            <p class="offer">Limited Time Offer: Get 15% off on all pre-orders! Use code: PREORDER04</p>
+            <br>
+            <a href="games.html" class="cta-btn">SHOP NOW! </a>
+        </div>
+        <div class="main__img--container">
+            <img src="images/ghj.svg" alt="" id="main__img">
+        </div>
+    </div>
+</div>
+<!---Deals Section-->
+<section class="deals-section">
+    <h2>Special Deals</h2>
+    <p><strong>Don't miss out on these limited-time offers on your favorite games!</strong> </p>
+
+    <div class="deals-container">
+        <div class="deal-card">
+            <img src="images/elden.jpg" width="200" height="170">
+            <h3>Elden Ring</h3>
+            <p class="game-price"><del>$80.99</del> $65.99</p>
+            <p class="game-description">Special deal for a limited time only!</p>
+            <button class="add-to-cart" onclick="addToCart('Elden Ring', 65.99)">Add to Cart</button>
+        </div>
+        <div class="deal-card">
+            <img src="images/Helldivers_2_cover_art.png"  width="200" height="170">
+            <h3>Helldivers 2</h3>
+            <p class="game-price"><del>$20.99</del> $15.99</p>
+            <p class="game-description">Get it now at an exclusive discount.</p>
+            <button class="add-to-cart" onclick="addToCart('Helldivers 2', 15.99)">Add to Cart</button>
+        </div>
+        <div class="deal-card">
+            <img src="images/MK1_(2023)_Cover_Art.jpg"  width="200" height="170">
+            <h3>Mortal Kombat </h3>
+            <p class="game-price"><del>$60.99</del> $46.99</p>
+            <p class="game-description">Grab the best deal while it last!</p>
+            <button class="add-to-cart" onclick="addToCart('Mortal Kombat', 60.99)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+
+<!--Services Section-->
+<section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-container">
+        
+        <div class="service-card">
+            <h3>Game Installation</h3>
+            <p>We offer hassle-free game installation assistance, ensuring all games are set up and ready to play across multiple platforms.</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>Customer Support</h3>
+            <p>Our 24/7 customer support is here to help you with any game-related issues, whether it's a technical problem or general inquiries.</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>Game Recommendations</h3>
+            <p>Get personalized game recommendations based on your preferences and previous purchases, tailored to your gaming style.</p>
+        </div>
+
+    </div>
+</section>
+
+<!--About section-->
+<section class="about-section">
+    <div class="about-section__img">
+        <img src="images/Gamin.jpg" width="820" height="500">
+    </div>
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>Welcome to <strong>TRGamesStore</strong>, your one-stop shop for all things gaming. We are passionate gamers, dedicated to bringing you the best selection of video games across various platforms. Whether you're a casual player or a hardcore enthusiast, we've got something for everyone.</p>
+        
+        <p>Founded in 2024, <strong>TRGamesStore</strong> was created with the mission to deliver top-quality games, exclusive deals, and exceptional customer support. We are committed to helping you find the perfect game that suits your taste and style.</p>
+
+        <p>Join us on this exciting journey as we continue to grow and bring the latest in gaming technology, all while creating a friendly and interactive community of gamers.</p>
+    </div>
+    </div>
+</section>
+<!-- Footer -->
+<section>
+    <footer>
+        <div class="footer-container">
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:innocentmundanga28@gmail.com">innocentmundanga28@gmail.com</a></p>
+                <p>Phone: 0789886120</p>
+            </div>
+    
+            <!-- Social Media -->
+            <div class="social-media">
+                <h1>Connect With Us</h1>
+                <br>
+                <a href="https://www.facebook.com"> <i class="fa-brands fa-facebook fa-2xl" style="color: #12346e;"></i></a>
+                <a href="https://www.instagram.com"> <i class="fa-brands fa-square-instagram fa-2xl" style="color: #103575;"></i></a>
+                <a href="https://www.twitter.com"> <i class="fa-brands fa-x-twitter fa-2xl" style="color: #102a56;"></i></a>
+                <a href="https://www.youtube.com"><i class="fa-brands fa-youtube fa-2xl" style="color: #0a2c66;"></i> </a>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <h1>Payment Methods</h1>
+                <img src="images/vs.png" alt="Visa">
+                <img src="images/mms.jpg" alt="MasterCard">
+                <img src="images/ppl.png" alt="PayPal">
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>© 2024 TRGameStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
